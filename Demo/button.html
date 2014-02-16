@@ -1,0 +1,26 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="button_style.css"/>
+	<script type="text/javascript" src="pennapps.js"></script>
+</head>
+
+IP ADDRESS: <div id="ip_address"></div>
+<script>
+	var myip;
+	function ip_callback(o){
+		myip=o.host;
+	}
+</script>
+<script src="https://smart-ip.net/geoip-json?callback=ip_callback"></script>
+<script>
+	var ip=document.getElementById("ip_address");
+	ip.innerHTML=myip;
+</script>
+channel: <div id="button_channel"></div>
+<script>
+	var test=document.getElementById("button_channel");
+	test.innerHTML=get_channel();
+</script>
+<a href="javascript:void(0);">A</a>
+<a href="javascript:void(0);">B</a>
+<a href="javascript:void(0);">C</a>
+<a href="javascript:void(0);">D</a>
